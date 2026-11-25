@@ -1,0 +1,9 @@
+[submodule "src/linux"]
+	path = src/linux
+	url = git@github.com:ze-gois/linux.git
+[submodule "src/linux-rust"]
+	path = src/linux-rust
+	url = git@github.com:ze-gois/linux.git
+[submodule "src/busybox"]
+	path = src/busybox
+	url = git@github.com:ze-gois/busybox.git
