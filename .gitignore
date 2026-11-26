@@ -1,2 +1,7 @@
-
-/src/linux-rust/
+/repos/*
+!/repos/README.md
+/worktrees/*
+!/worktrees/README.md
+/experiments/*
+!/experiments/README.md
+/src/

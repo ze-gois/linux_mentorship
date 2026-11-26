@@ -1,0 +1,4 @@
+# project	name	commit
+linux	mainline	f0100363d8c374bd8e9ea7c9ba02744f0b802ca4
+linux	rust-next	b6a9fa34ce4187cb69d3c588a4bbffc31ce5db8f
+busybox	master	371fe9f71d445d18be28c82a2a6d82115c8af19d

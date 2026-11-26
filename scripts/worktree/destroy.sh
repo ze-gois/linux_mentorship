@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/../lib/common.sh"
+[[ $# -eq 3 && "$3" == --yes ]] || die "Usage: $0 PROJECT NAME --yes"
+repo="$(project_repo "$1")"; valid_name "$2"
+require_bare "$repo"
+target="$ROOT/worktrees/$1/$2"
+[[ -e "$target/.git" ]] || die "Missing worktree: $target"
+[[ "$(git -C "$target" rev-parse --path-format=absolute --git-common-dir)" == "$(realpath "$repo")" ]] || die "Different repository"
+[[ -z "$(git -C "$target" status --porcelain --ignored)" ]] || die "Worktree contains changes or ignored files"
+git --git-dir="$repo" worktree remove "$target"
